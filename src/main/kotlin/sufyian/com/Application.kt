@@ -1,0 +1,14 @@
+package sufyian.com
+
+import io.ktor.server.engine.*
+import io.ktor.server.netty.*
+import sufyian.com.plugins.*
+
+fun main() {
+    embeddedServer(Netty, port = 8080, host = "0.0.0.0") {
+        configureMonitoring()
+        configureSerialization()
+        configureAdministration()
+        configureRouting()
+    }.start(wait = true)
+}
