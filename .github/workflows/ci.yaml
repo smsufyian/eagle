@@ -1,8 +1,6 @@
-name: Change Feedback Pipeline
+name: Integration pipeline
 on: pull_request
-concurrency:
-  group: ""
-  cancel-in-progress: true
+
 jobs:
   check_coding_conventions:
     runs-on: ubuntu-latest
