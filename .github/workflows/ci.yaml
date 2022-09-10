@@ -1,0 +1,26 @@
+name: Change Feedback Pipeline
+on: pull_request
+concurrency:
+  group: ""
+  cancel-in-progress: true
+jobs:
+  check_coding_conventions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+
+  check_functionality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+
+      - name: Run test cases
+        run : ./gradlew test
+
+  check_architecture:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3

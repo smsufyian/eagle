@@ -1,0 +1,7 @@
+1. Create feedback mechanism loop infrastructure
+1a. Disable version control branching in the codebase
+1b. Whenever the change is pushed to master it should trigger the feedback process
+1c. When the feedback constrains are met only then the change should land in master branch
+1d. The constraints are , all the tests should pass , coding conventions are followed and change size is below some threshold
+1e. Decouple release from deployment and control release through feature toggles
+1f. Notify on slack the status of the feedback process along with the url and version number.
